@@ -1,0 +1,27 @@
+.primary-cta, .contact-submit { background: #7742d5; }
+.primary-cta:hover, .contact-submit:hover:not(:disabled) { background: #6534bf; }
+.content-section, .projects-section { content-visibility: auto; contain-intrinsic-block-size: auto 700px; }
+.projects-section { contain-intrinsic-block-size: auto 3000px; }
+.site-footer { padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+.contact-details, .contact-form-panel, .about-story, .skills-layout > *, .project-modal-columns > * { min-width: 0; }
+.contact-detail strong, .footer-bottom p, .project-links { overflow-wrap: anywhere; }
+.chat-sources a { min-height: 36px; font-size: 10px; }
+.chat-answer-mode, .chat-message-author, .chat-character-count { font-size: 10px; }
+.navigation-dialog:focus-visible, .chat-dialog:focus-visible { outline-offset: -3px; }
+.command-search-row input:focus-visible { outline: 2px solid #22d3ee; outline-offset: 4px; border-radius: 2px; }
+.site[data-effects='light'] .portrait-orbit { animation: none; }
+.site[data-effects='light'] .site-header.is-scrolled { backdrop-filter: none; }
+.site[data-effects='light'] .project-card:hover { box-shadow: none; }
+.site[data-effects='light'] dialog::backdrop, .site[data-motion='off'] dialog::backdrop { backdrop-filter: none; }
+
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .hero { min-height: 0; }
+  .site-header.is-scrolled, dialog::backdrop { backdrop-filter: none; }
+  .architecture-connector > i { animation: none !important; }
+  .project-card { transform-style: flat; }
+  .project-card:hover { box-shadow: none; }
+}
+@media (max-width: 767px) {
+  .projects-section { contain-intrinsic-block-size: auto 6500px; }
+  .chat-sources a { min-height: 44px; }
+}

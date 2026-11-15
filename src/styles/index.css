@@ -1,0 +1,92 @@
+@import './fonts.css';
+@import 'tailwindcss';
+@import 'lenis/dist/lenis.css';
+@import './layout.css';
+@import './hero.css';
+@import './projects.css';
+@import './sections.css';
+@import './command.css';
+@import './chat.css';
+@import './polish.css';
+
+@theme {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'Manrope', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-ink: #090b10;
+  --color-surface: #141824;
+  --color-paper: #f4f6fc;
+  --color-violet: #8b5cf6;
+  --color-cyan: #22d3ee;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: var(--font-sans);
+  color: var(--color-paper);
+  background: var(--color-ink);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #8b5cf64d;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 5px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  overflow-wrap: anywhere;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+html {
+  scroll-padding-top: 100px;
+}
+
+.site[data-motion='off'] *,
+.site[data-motion='off'] *::before,
+.site[data-motion='off'] *::after {
+  animation: none !important;
+  transition-duration: 0s !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
